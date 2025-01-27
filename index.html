@@ -8,6 +8,27 @@
     <title>Sólidos Geométricos</title>
 </head>
 <body>
-    
+    <header>
+        <h1>Calculadora de Sólidos Geométricos</h1>
+    </header>
+    <main class="app">
+        <form class="form" id="form">
+            <label for="solido">Escolha um sólido:</label>
+            <select id="solido">
+                <option value="Cone" selected>Cone</option>
+                <option value="Cubo">Cubo</option>
+                <option value="Cilindro">Cilindro</option>
+                <option value="Paralelepipedo">Paralelepípedo</option>
+            </select>
+
+            <div id="parametros"></div>
+            <button type="submit">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+        
+    </main>
+    <footer>
+        <small>By Geometric System &copy;&reg;&trade;</small>
+    </footer>
 </body>
 </html>
