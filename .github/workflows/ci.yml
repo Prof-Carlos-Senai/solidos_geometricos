@@ -1,4 +1,4 @@
-name: CI/CD Pipeline
+name: CI Pipeline
 
 on:
   push:
@@ -31,18 +31,8 @@ jobs:
       - name: Run Tests
         run: npm run test
 
-      # Passo 5: Build da aplicação (apenas se os testes passarem)
+      # Passo 5: Build da aplicação
       - name: Build Application
         run: npm run build
 
-      # Passo 6: Instalar a versão mais recente do Vercel CLI
-      - name: Install Latest Vercel CLI
-        run: npm install -g vercel
-
-      # Passo 7: Deploy no Vercel
-      - name: Deploy to Vercel
-        run: npx vercel --prod --yes
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
-    
           
