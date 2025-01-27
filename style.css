@@ -11,10 +11,24 @@ body{
     background: linear-gradient(to left, rgba(98, 183, 253, 0.858), rgba(48, 160, 253, 0.858), rgba(21, 124, 209, 0.858), rgba(2, 61, 110, 0.858));
 }
 
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+}
+
 header h1{
     font-size: 2.5rem;
     font-weight: bold;
     margin-bottom: 24px;
+}
+
+header img{
+    width: 240px;
+    height: 120px;
+    border-radius: 16px;
 }
 
 .app {

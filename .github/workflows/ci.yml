@@ -34,3 +34,9 @@ jobs:
       # Passo 5: Build da aplicação (apenas se os testes passarem)
       - name: Build Application
         run: npm run build
+
+      # Passo 6: Deploy no Vercel
+      - name: Deploy to Vercel
+        run: npx vercel --prod --yes
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
