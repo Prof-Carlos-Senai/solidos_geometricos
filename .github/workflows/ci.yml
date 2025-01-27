@@ -35,8 +35,14 @@ jobs:
       - name: Build Application
         run: npm run build
 
-      # Passo 6: Deploy no Vercel
+      # Passo 6: Instalar a versão mais recente do Vercel CLI
+      - name: Install Latest Vercel CLI
+        run: npm install -g vercel
+
+      # Passo 7: Deploy no Vercel
       - name: Deploy to Vercel
         run: npx vercel --prod --yes
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+    
+          
