@@ -37,6 +37,6 @@ jobs:
 
       # Passo 6: Deploy no Vercel
       - name: Deploy to Vercel
-        run: npx vercel --prod
+        run: npx vercel --prod --yes
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
